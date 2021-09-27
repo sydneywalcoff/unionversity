@@ -23,5 +23,13 @@ type SearchEventsOptions = {
 }
 
 function searchEvents(options: SearchEventsOptions) {
-
+    const events: (Course | StudyGroup)[] = options.eventType === 'courses' ? courses : studyGroups;
+     return events.filter((event:(Course | StudyGroup)) => {
+        if(typeof options.query === 'number') {
+           return options.query === event.id;
+        }
+        if(typeof options.query === 'string') {
+            return event.keywords.includes(options.query)
+        }
+    });
 }
