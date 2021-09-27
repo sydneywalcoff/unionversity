@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const courses = [
     {
         id: 1,
@@ -21,5 +23,5 @@ const courses = [
         eventType: 'course',
     },
 ];
-
-export default courses;
+exports.default = courses;
+//# sourceMappingURL=courses.js.map
