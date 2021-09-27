@@ -13,6 +13,17 @@ function searchEvents(options) {
         }
     });
 }
-const searchResults = searchEvents({ query: 1, eventType: 'courses' });
-console.log(searchResults);
+let enrolledEvents = [];
+function enroll(event) {
+    enrolledEvents.push(event);
+}
+;
+enroll({
+    id: 1,
+    studyGroupId: 1,
+    title: 'Improvisational Arts Lab',
+    keywords: ['improv', 'art', 'performance', 'lab'],
+    eventType: 'course'
+});
+console.log(enrolledEvents);
 //# sourceMappingURL=index.js.map
