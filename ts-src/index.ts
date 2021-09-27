@@ -40,3 +40,30 @@ function enroll(event: (Course | StudyGroup)) {
     enrolledEvents.push(event);
 };
 
+// allow enroll() fxn to take an array of courses and add them all to enrolled events
+// add dropCourse() fxn
+// add another fxn that prints only the titles of your enrolled events
+function printCourseNames() {
+    let courseNames = [];
+    enrolledEvents.forEach(event => courseNames.push(event.title));
+    console.log(courseNames);
+}
+
+// search events test
+console.log(searchEvents({
+    query: 1,
+    eventType: 'courses'
+}));
+
+// enroll in event test
+enroll({
+    id: 1,
+    studyGroupId: 1,
+    title: 'Improvisational Arts Lab',
+    keywords: ['improv', 'art', 'performance', 'lab'],
+    eventType: 'course'
+});
+console.log(enrolledEvents);
+
+// print courseNames test
+printCourseNames();
