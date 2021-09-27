@@ -29,7 +29,10 @@ function searchEvents(options: SearchEventsOptions) {
            return options.query === event.id;
         }
         if(typeof options.query === 'string') {
-            return event.keywords.includes(options.query)
+            return event.keywords.includes(options.query);
         }
     });
 }
+
+const searchResults = searchEvents({ query: 1, eventType: 'courses' });
+console.log(searchResults);

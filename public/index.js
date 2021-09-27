@@ -13,4 +13,6 @@ function searchEvents(options) {
         }
     });
 }
+const searchResults = searchEvents({ query: 1, eventType: 'courses' });
+console.log(searchResults);
 //# sourceMappingURL=index.js.map
